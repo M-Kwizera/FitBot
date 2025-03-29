@@ -2,32 +2,29 @@
   "name": "fitbot",
   "version": "1.0.0",
   "description": "Copyright © 2025 fitBot All Rights Reserved.",
-  "main": "server.jsx",
-  "type": "module",
+  "main": "server.js",
   "dependencies": {
-    "axios": "^1.8.4",
+    "axios": "^1.4.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.27.0",
-    "@babel/core": "^7.26.10",
-    "@babel/node": "^7.26.0",
-    "@babel/preset-env": "^7.26.9",
-    "@babel/preset-react": "^7.26.3",
-    "@babel/register": "^7.25.9"
+    "@babel/cli": "^7.21.0",
+    "@babel/node": "^7.21.0",
+    "@babel/preset-env": "^7.21.0",
+    "@babel/preset-react": "^7.21.0",
+    "nodemon": "^3.1.9"
   },
   "scripts": {
-    "start": "babel-node server.jsx",
-    "build": "babel server.jsx --out-file server.js",
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/M-Kwizera/FitBot.git"
+    "url": "https://github.com/M-Kwizera/FitBot.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
