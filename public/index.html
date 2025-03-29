@@ -30,19 +30,44 @@
 
     <section id="workout-section">
         <h2>Workout Suggestions</h2>
-        <label for="workout-plan">Choose a workout plan:</label>
-        <select id="workout-plan" name="workout-plan">
-            <option value="workout1">Full Body Strength Training</option>
-            <option value="workout2">High-Intensity Interval Training (HIIT)</option>
-            <option value="workout3">Yoga & Flexibility</option>
-            <option value="workout4">Core & Cardio Circuit</option>
-            <option value="workout5">Lower Body Power Workout</option>
-            <option value="workout6">Upper Body Strength Workout</option>
+        <label for="goal">Choose your fitness goal:</label>
+        <select id="goal" name="goal">
+            <option value="weight-loss">Weight Loss</option>
+            <option value="strength-building">Strength Building</option>
+            <option value="flexibility">Flexibility</option>
         </select>
-        <input type="text" id="workout-search" placeholder="Search workout..." />
-        <button onclick="fetchWorkouts()">Refresh Workouts</button>
+        <button onclick="generateWorkouts()">Get Workouts</button>
         <div id="workouts"></div>
     </section>
+
+    <script>
+        async function generateWorkouts() {
+            const goal = document.getElementById('goal').value;
+
+            const response = await fetch('http://localhost:3000/api/getWorkouts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ goal: goal })
+            });
+
+            const data = await response.json();
+            const workoutsContainer = document.getElementById('workouts');
+
+            if (data.workouts) {
+                workoutsContainer.innerHTML = '';
+                data.workouts.forEach(workout => {
+                    const workoutItem = document.createElement('div');
+                    workoutItem.className = 'workout-item';
+                    workoutItem.innerHTML = `<strong>${workout.name}</strong><p>${workout.description}</p>`;
+                    workoutsContainer.appendChild(workoutItem);
+                });
+            } else {
+                workoutsContainer.innerHTML = `<p>${data.message}</p>`;
+            }
+        }
+    </script>
 
     <script src="script.js"></script>
 </body>

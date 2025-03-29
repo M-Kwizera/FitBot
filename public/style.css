@@ -1,49 +1,124 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitBot</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    height: 100vh;
+}
 
-    <nav>
-        <a href="landing.html">Go to Landing Page</a>
-    </nav>
+nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1rem;
+    color: #fff;
+}
 
-    <h1>Welcome to FitBot</h1>
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
 
-    <section id="meal-section">
-        <h2>Today's Meal Plan</h2>
-        <label for="meal-plan">Choose a meal plan:</label>
-        <select id="meal-plan" name="meal-plan">
-            <option value="meal1">Grilled Chicken Salad</option>
-            <option value="meal2">Vegetarian Buddha Bowl</option>
-            <option value="meal3">Salmon and Quinoa</option>
-            <option value="meal4">Egg & Avocado Toast</option>
-        </select>
-        <input type="text" id="meal-search" placeholder="Search meal..." />
-        <button onclick="fetchMeals()">Refresh Meals</button>
-        <div id="meals"></div>
-    </section>
+nav a:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
 
-    <section id="workout-section">
-        <h2>Workout Suggestions</h2>
-        <label for="workout-plan">Choose a workout plan:</label>
-        <select id="workout-plan" name="workout-plan">
-            <option value="workout1">Full Body Strength Training</option>
-            <option value="workout2">High-Intensity Interval Training (HIIT)</option>
-            <option value="workout3">Yoga & Flexibility</option>
-            <option value="workout4">Core & Cardio Circuit</option>
-            <option value="workout5">Lower Body Power Workout</option>
-            <option value="workout6">Upper Body Strength Workout</option>
-        </select>
-        <input type="text" id="workout-search" placeholder="Search workout..." />
-        <button onclick="fetchWorkouts()">Refresh Workouts</button>
-        <div id="workouts"></div>
-    </section>
+h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Verdana', sans-serif;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+section {
+    background: rgba(255, 255, 255, 0.9);
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+label {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 10px;
+    display: block;
+}
+
+select, input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+}
+
+button {
+    background: #27ae60;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background: #219150;
+}
+
+#meals, #workouts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.meal-item, .workout-item {
+    background: #ecf0f1;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    section {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
