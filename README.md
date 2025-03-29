@@ -1,3 +1,7 @@
+To run, execute "node backend/server.js"
+
+
+
 # FitBot
 
 Copyright © 2025 fitBot All Rights Reserved.
