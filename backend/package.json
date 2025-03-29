@@ -1,0 +1,32 @@
+{
+    "name": "fitbot",
+    "description": "Copyright © 2025 fitBot All Rights Reserved.",
+    "version": "1.0.0",
+    "main": "index.js",
+    "dependencies": {
+      "dotenv": "^16.4.7",
+      "express": "^4.21.2"
+    },
+    "devDependencies": {
+      "@babel/cli": "^7.19.0",
+      "@babel/preset-env": "^7.19.0",
+      "@babel/preset-react": "^7.18.6",
+      "@babel/node": "^7.19.0"
+    },
+    "scripts": {
+      "start": "babel-node server.jsx",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/M-Kwizera/FitBot.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/M-Kwizera/FitBot/issues"
+    },
+    "homepage": "https://github.com/M-Kwizera/FitBot#readme"
+  }
+  
