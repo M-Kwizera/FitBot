@@ -1,4 +1,4 @@
-To run, execute "node backend/server.js"
+To run, execute "node backend/server.cjs"
 
 
 
