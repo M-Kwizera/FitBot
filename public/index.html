@@ -12,6 +12,13 @@
     <!-- Meal Plan Section -->
     <section id="meal-section">
         <h2>Today's Meal Plan</h2>
+        <label for="meal-plan">Choose a meal plan:</label>
+        <select id="meal-plan" name="meal-plan">
+            <option value="meal1">Grilled Chicken Salad</option>
+            <option value="meal2">Vegetarian Buddha Bowl</option>
+            <option value="meal3">Salmon and Quinoa</option>
+            <option value="meal4">Egg & Avocado Toast</option>
+        </select>
         <input type="text" id="meal-search" placeholder="Search meal..." />
         <button onclick="fetchMeals()">Refresh Meals</button>
         <div id="meals"></div>
@@ -20,6 +27,15 @@
     <!-- Workout Section -->
     <section id="workout-section">
         <h2>Workout Suggestions</h2>
+        <label for="workout-plan">Choose a workout plan:</label>
+        <select id="workout-plan" name="workout-plan">
+            <option value="workout1">Full Body Strength Training</option>
+            <option value="workout2">High-Intensity Interval Training (HIIT)</option>
+            <option value="workout3">Yoga & Flexibility</option>
+            <option value="workout4">Core & Cardio Circuit</option>
+            <option value="workout5">Lower Body Power Workout</option>
+            <option value="workout6">Upper Body Strength Workout</option>
+        </select>
         <input type="text" id="workout-search" placeholder="Search workout..." />
         <button onclick="fetchWorkouts()">Refresh Workouts</button>
         <div id="workouts"></div>
