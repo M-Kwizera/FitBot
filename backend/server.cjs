@@ -11,8 +11,8 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-const mealRoutes = require('./routes/meals.js');
-const workoutRoutes = require('./routes/workouts.js');
+const mealRoutes = require('../routes/meals.js');
+const workoutRoutes = require('../routes/workouts.js');
 
 app.use('/api/meals', mealRoutes);
 app.use('/api/workouts', workoutRoutes);
